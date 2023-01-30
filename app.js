@@ -45,8 +45,6 @@ function getCurrentLocationWeather (lat, lon) {
 function getCityWeather(cityName) {
 
     weatherIcon.src = `./assets/loading-icon.svg`;
-
-
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=pt_br&appid=${apiKey}`)
     .then((response) => response.json())
     .then((data) => displayWeather(data))
